@@ -1,4 +1,38 @@
+CREATE TABLE PurchaseAmount(
+CalendarDate DATE,
+Customer NVARCHAR(250),
+Category NVARCHAR(250),
+Amount NUMERIC(18, 2)
+)
 
+
+
+INSERT INTO PurchaseAmount(CalendarDate, Customer, Category, Amount)
+SELECT '20200101' AS CalendarDate, N'Customer #1' AS Customer, N'Fashon' AS Category, 1000 AS Amount  
+UNION
+SELECT '20200201' AS CalendarDate, N'Customer #1' AS Customer, N'Fashon' AS Category, 1200 AS Amount  
+UNION
+SELECT '20200301' AS CalendarDate, N'Customer #1' AS Customer, N'Fashon' AS Category, 1500 AS Amount  
+UNION
+SELECT '20200401' AS CalendarDate, N'Customer #1' AS Customer, N'Fashon' AS Category, 1700 AS Amount 
+UNION
+SELECT '20200101' AS CalendarDate, N'Customer #2' AS Customer, N'Fashon' AS Category, 2000 AS Amount  
+UNION
+SELECT '20200201' AS CalendarDate, N'Customer #2' AS Customer, N'Fashon' AS Category, 2200 AS Amount  
+UNION
+SELECT '20200301' AS CalendarDate, N'Customer #2' AS Customer, N'Fashon' AS Category, 2500 AS Amount
+UNION
+SELECT '20200401' AS CalendarDate, N'Customer #2' AS Customer, N'Fashon' AS Category, 2700 AS Amount 
+UNION
+SELECT '20200101' AS CalendarDate, N'Customer #3' AS Customer, N'Electronics' AS Category, 3000 AS Amount  
+UNION
+SELECT '20200201' AS CalendarDate, N'Customer #3' AS Customer, N'Electronics' AS Category, 3200 AS Amount  
+UNION
+SELECT '20200301' AS CalendarDate, N'Customer #3' AS Customer, N'Electronics' AS Category, 3500 AS Amount
+UNION
+SELECT '20200401' AS CalendarDate, N'Customer #3' AS Customer, N'Electronics' AS Category, 3700 AS Amount
+
+--------------------------------------------------------------
 
 drop table if exists #temp1
 drop table if exists #temp2
